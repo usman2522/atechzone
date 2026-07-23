@@ -8,7 +8,10 @@
 
   const header = document.getElementById("site-header");
   const menuToggle = document.getElementById("menu-toggle");
+  const menuClose = document.getElementById("menu-close");
   const mainNav = document.getElementById("main-nav");
+  const navBackdrop = document.getElementById("nav-backdrop");
+  const navDrawer = document.getElementById("nav-drawer");
   const navLinks = document.querySelectorAll(".nav-link");
   const sections = document.querySelectorAll("section[id]");
   const prefersReducedMotion = window.matchMedia(
@@ -28,13 +31,15 @@
   window.addEventListener("scroll", updateHeader, { passive: true });
   updateHeader();
 
-  /* ---------- Mobile menu ---------- */
+  /* ---------- Mobile menu drawer ---------- */
   function openMenu() {
     if (!mainNav || !menuToggle) return;
     mainNav.classList.add("is-open");
+    if (navBackdrop) navBackdrop.hidden = false;
     menuToggle.setAttribute("aria-expanded", "true");
     menuToggle.setAttribute("aria-label", "Close menu");
     document.body.classList.add("menu-open");
+    if (menuClose) menuClose.focus();
   }
 
   function closeMenu() {
@@ -43,6 +48,13 @@
     menuToggle.setAttribute("aria-expanded", "false");
     menuToggle.setAttribute("aria-label", "Open menu");
     document.body.classList.remove("menu-open");
+    if (navBackdrop) {
+      window.setTimeout(function () {
+        if (!mainNav.classList.contains("is-open")) {
+          navBackdrop.hidden = true;
+        }
+      }, 400);
+    }
   }
 
   function toggleMenu() {
@@ -58,9 +70,17 @@
     menuToggle.addEventListener("click", toggleMenu);
   }
 
-  /* Close menu when a nav link or CTA inside nav is clicked */
-  if (mainNav) {
-    mainNav.querySelectorAll("a").forEach(function (link) {
+  if (menuClose) {
+    menuClose.addEventListener("click", closeMenu);
+  }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener("click", closeMenu);
+  }
+
+  /* Close menu when a nav link or CTA inside drawer is clicked */
+  if (navDrawer) {
+    navDrawer.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", closeMenu);
     });
   }
