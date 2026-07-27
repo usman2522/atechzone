@@ -249,6 +249,52 @@ button {
   z-index: 1001;
 }
 
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  border-radius: 100px;
+  background-color: var(--light-background);
+  border: 1px solid rgba(41, 59, 145, 0.12);
+}
+
+.lang-btn {
+  min-width: 38px;
+  padding: 0.4rem 0.65rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  transition:
+    color var(--transition),
+    background-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.lang-btn:hover {
+  color: var(--primary-color);
+}
+
+.lang-btn.is-active {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(41, 59, 145, 0.22);
+}
+
+.lang-switch-drawer {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 4px;
+}
+
+.lang-switch-drawer .lang-btn {
+  flex: 1;
+  min-height: 42px;
+  font-size: 0.8125rem;
+}
+
 .desktop-nav {
   display: flex;
   align-items: center;
@@ -391,12 +437,12 @@ button {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 600px);
+  grid-template-columns: minmax(0, 720px);
   align-items: center;
 }
 
 .hero-content {
-  max-width: 36rem;
+  max-width: 44rem;
 }
 
 .hero-panel {
@@ -438,7 +484,7 @@ button {
   letter-spacing: -0.035em;
   color: var(--text-color);
   margin-bottom: 0;
-  max-width: 11ch;
+  max-width: 11em;
   text-wrap: balance;
 }
 
@@ -449,6 +495,15 @@ button {
   max-width: 32rem;
   margin-bottom: 2rem;
   letter-spacing: -0.01em;
+}
+
+.hero-lead {
+  margin-top: 1.35rem;
+  font-size: 1.015rem;
+  font-weight: 500;
+  line-height: 1.75;
+  color: var(--text-muted);
+  max-width: 38rem;
 }
 
 .hero-actions {
@@ -787,14 +842,19 @@ button {
 .cta-block {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
   margin-top: 3.5rem;
-  padding: 2.5rem 3rem;
-  background: linear-gradient(135deg, var(--primary-color) 0%, #1f2d73 100%);
-  border-radius: var(--card-radius);
-  color: var(--white-color);
-  box-shadow: var(--shadow-lift);
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  color: inherit;
+  box-shadow: none;
+}
+
+.cta-block-simple {
+  justify-content: center;
+  padding: 0;
 }
 
 .cta-heading {
@@ -813,15 +873,15 @@ button {
 }
 
 .cta-block .btn-primary {
-  background-color: var(--white-color);
-  color: var(--primary-color);
-  border-color: var(--white-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-color: var(--primary-color);
 }
 
 .cta-block .btn-primary:hover {
-  background-color: var(--light-background);
-  border-color: var(--light-background);
-  color: var(--primary-hover);
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: var(--white-color);
 }
 
 /* ---------- Aarkada Partnership ---------- */
@@ -976,6 +1036,10 @@ button {
 }
 
 .partnership-signoff {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
   margin-top: 0.5rem;
   padding: 1.25rem 1.35rem;
   border-radius: 18px;
@@ -985,6 +1049,10 @@ button {
     rgba(41, 59, 145, 0.03) 100%
   );
   border: 1px solid rgba(41, 59, 145, 0.1);
+}
+
+.partnership-signoff-text {
+  min-width: 0;
 }
 
 .partnership-signoff-brand {
@@ -1001,6 +1069,21 @@ button {
   font-weight: 600;
   color: var(--text-muted);
   line-height: 1.45;
+}
+
+.partnership-signoff .btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .partnership-signoff {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .partnership-signoff .btn {
+    width: 100%;
+  }
 }
 
 /* ---------- Contact ---------- */
@@ -1310,7 +1393,7 @@ body.menu-open {
   }
 
   .cta-block {
-    padding: 2rem;
+    padding: 0;
   }
 
   .partnership-card,
@@ -1473,7 +1556,7 @@ body.menu-open {
   }
 
   .hero-content {
-    max-width: 36rem;
+    max-width: 44rem;
   }
 
   .hero-panel {
@@ -1647,7 +1730,7 @@ body.menu-open {
   }
 
   .cta-block {
-    padding: 1.75rem 1.5rem;
+    padding: 0;
   }
 
   .partnership-card,

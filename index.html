@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ATech Zones — Italian e-commerce for premium beauty, skincare, haircare, and cosmetic products. Premium Beauty. Trusted Quality." />
-  <title>ATech Zones | Premium Beauty. Trusted Quality.</title>
+  <meta name="description" data-i18n="meta.description" content="ATech Zones — e-commerce italiano per prodotti premium di bellezza, cura della pelle, cura dei capelli e cosmetica. Bellezza premium. Qualità affidabile." />
+  <title data-i18n="meta.title">ATech Zones | Bellezza premium. Qualità affidabile.</title>
 
   <!-- Google Fonts: Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +17,7 @@
   <!-- ========== HEADER ========== -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a href="#home" class="logo-link" aria-label="ATech Zones — Home">
+      <a href="#home" class="logo-link" data-i18n-aria="aria.home" aria-label="ATech Zones — Casa">
         <img
           src="images/logo.png"
           alt="ATech Zones logo"
@@ -29,21 +29,26 @@
 
       <nav class="desktop-nav" aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#why-choose-us" class="nav-link">Why Choose Us</a></li>
-          <li><a href="#aarkada" class="nav-link">Official Distributor</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#home" class="nav-link active" data-i18n="nav.home">Casa</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">Chi siamo</a></li>
+          <li><a href="#why-choose-us" class="nav-link" data-i18n="nav.why">Perché sceglierci</a></li>
+          <li><a href="#aarkada" class="nav-link" data-i18n="nav.distributor">Distributore ufficiale</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contatto</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a href="https://tpcvmc-1y.myshopify.com/" class="btn btn-primary btn-nav btn-header-desktop" aria-label="Shop AARKADA" target="_blank" rel="noopener noreferrer">Shop AARKADA</a>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-lang="it" aria-pressed="true">IT</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a href="https://tpcvmc-1y.myshopify.com/" class="btn btn-primary btn-nav btn-header-desktop" data-i18n="nav.shop" data-i18n-aria="aria.shop" aria-label="Acquista AARKADA" target="_blank" rel="noopener noreferrer">Acquista AARKADA</a>
         <button
           class="menu-toggle"
           id="menu-toggle"
           type="button"
-          aria-label="Open menu"
+          data-i18n-aria="aria.openMenu"
+          aria-label="Apri menu"
           aria-expanded="false"
           aria-controls="nav-drawer"
         >
@@ -58,9 +63,9 @@
   <!-- Mobile menu drawer (outside header for full-screen fixed positioning) -->
   <nav class="mobile-nav" id="main-nav" aria-label="Mobile">
     <div class="nav-backdrop" id="nav-backdrop" hidden></div>
-    <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" data-i18n-aria="aria.menu" aria-label="Menu">
       <div class="nav-drawer-top">
-        <a href="#home" class="nav-drawer-logo" aria-label="ATech Zones — Home">
+        <a href="#home" class="nav-drawer-logo" data-i18n-aria="aria.home" aria-label="ATech Zones — Casa">
           <img
             src="images/logo.png"
             alt="ATech Zones logo"
@@ -72,27 +77,35 @@
           class="nav-drawer-close"
           id="menu-close"
           type="button"
-          aria-label="Close menu"
+          data-i18n-aria="aria.closeMenu"
+          aria-label="Chiudi menu"
         >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
 
       <ul class="nav-list">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#why-choose-us" class="nav-link">Why Choose Us</a></li>
-        <li><a href="#aarkada" class="nav-link">Official Distributor</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#home" class="nav-link active" data-i18n="nav.home">Casa</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">Chi siamo</a></li>
+        <li><a href="#why-choose-us" class="nav-link" data-i18n="nav.why">Perché sceglierci</a></li>
+        <li><a href="#aarkada" class="nav-link" data-i18n="nav.distributor">Distributore ufficiale</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contatto</a></li>
       </ul>
+
+      <div class="lang-switch lang-switch-drawer" role="group" aria-label="Language">
+        <button type="button" class="lang-btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
 
       <a
         href="https://tpcvmc-1y.myshopify.com/"
         class="btn btn-primary btn-nav btn-drawer-shop"
-        aria-label="Shop AARKADA"
+        data-i18n="nav.shop"
+        data-i18n-aria="aria.shop"
+        aria-label="Acquista AARKADA"
         target="_blank"
         rel="noopener noreferrer"
-      >Shop AARKADA</a>
+      >Acquista AARKADA</a>
     </div>
   </nav>
 
@@ -114,17 +127,13 @@
           <div class="hero-panel">
             <p class="hero-label">
               <span class="hero-label-accent" aria-hidden="true"></span>
-              Welcome to ATech Zones
+              <span data-i18n="hero.label">Benvenuti su ATech Zones</span>
             </p>
-            <h1 id="hero-heading" class="hero-heading">Premium Beauty. Trusted Quality.</h1>
+            <h1 id="hero-heading" class="hero-heading" data-i18n="hero.heading">Bellezza premium. Qualità affidabile.</h1>
 
-            <p class="about-text">
-              ATech Zones is an Italian e-commerce company specializing in the sourcing, distribution, and online retail of premium beauty, skincare, haircare, and cosmetic products.
+            <p class="hero-lead" data-i18n="hero.text">
+              ATech Zones è un'azienda italiana di e-commerce specializzata nell'approvvigionamento, nella distribuzione e nella vendita online di prodotti di alta gamma per la bellezza, la cura della pelle, la cura dei capelli e la cosmetica.
             </p>
-            <div class="hero-actions" style="display: none;">
-              <a href="#about" class="btn btn-primary">Discover ATech Zones</a>
-              <a href="https://tpcvmc-1y.myshopify.com/" class="btn btn-outline btn-outline-light" aria-label="Shop AARKADA" target="_blank" rel="noopener noreferrer">Shop AARKADA</a>
-            </div>
           </div>
         </div>
       </div>
@@ -141,31 +150,31 @@
       <div class="container">
         <div class="about-top">
           <div class="about-content">
-            <h2 id="about-heading" class="section-heading reveal">
-              About ATech Zones
+            <h2 id="about-heading" class="section-heading reveal" data-i18n="about.heading">
+              Informazioni su ATech Zones
             </h2>
 
             <div class="about-text reveal">
-              <p>
-                ATech Zones is an Italian e-commerce company specializing in the sourcing, distribution, and online retail of premium beauty, skincare, haircare, and cosmetic products.
+              <p data-i18n="about.p1">
+                ATech Zones è un'azienda italiana di e-commerce specializzata nell'approvvigionamento, nella distribuzione e nella vendita online di prodotti premium per la bellezza, la cura della pelle, la cura dei capelli e la cosmetica.
               </p>
-              <p>
-                We proudly serve retailers, wholesalers, business partners, and individual consumers by offering authentic, high-quality products sourced from trusted manufacturers and renowned brands worldwide.
+              <p data-i18n="about.p2">
+                Serviamo con orgoglio rivenditori, grossisti, partner commerciali e consumatori privati, offrendo prodotti autentici e di alta qualità provenienti da produttori affidabili e marchi rinomati a livello mondiale.
               </p>
-              <p>
-                Our products are available through leading online marketplaces as well as our own online store, enabling us to efficiently serve both B2B and B2C customers with reliability and convenience.
+              <p data-i18n="about.p3">
+                I nostri prodotti sono disponibili sia sui principali marketplace online che sul nostro store dedicato, consentendoci di servire in modo efficiente, affidabile e conveniente sia i clienti B2B che quelli B2C.
               </p>
-              <p>
-                Whether you are a retailer, wholesaler, business partner, or beauty enthusiast, we are committed to delivering genuine products, competitive value, and an exceptional customer experience.
+              <p data-i18n="about.p4">
+                Che siate rivenditori, grossisti, partner commerciali o appassionati di bellezza, ci impegniamo a offrire prodotti autentici, condizioni vantaggiose e un'esperienza cliente eccellente.
               </p>
-              <p>
-                Supported by efficient warehousing, reliable logistics, and an optimised supply chain, we ensure fast order fulfilment, dependable delivery, and consistent service from purchase to doorstep.
+              <p data-i18n="about.p5">
+                Grazie a una gestione efficiente del magazzino, a una logistica affidabile e a una catena di approvvigionamento ottimizzata, garantiamo una rapida evasione degli ordini, consegne sicure e un servizio costante, dall'acquisto fino alla consegna a domicilio.
               </p>
-              <p>
-                Our success is built on the dedication of our team. Their expertise, passion, and commitment to excellence enable us to build lasting partnerships and earn the trust of customers across international markets.
+              <p data-i18n="about.p6">
+                Il nostro successo si fonda sulla dedizione del nostro team. La competenza, la passione e l'impegno verso l'eccellenza dei nostri collaboratori ci permettono di costruire partnership durature e di conquistare la fiducia dei clienti sui mercati internazionali.
               </p>
-              <p>
-                At ATech Zones, quality, authenticity, and customer satisfaction are at the heart of everything we do.
+              <p data-i18n="about.p7">
+                In ATech Zones, la qualità, l'autenticità e la soddisfazione del cliente sono al centro di tutto ciò che facciamo.
               </p>
             </div>
           </div>
@@ -192,7 +201,7 @@
                 <path d="M16 3.13a4 4 0 0 1 0 7.75" />
               </svg>
             </span>
-            <span class="highlight-text">B2B &amp; B2C Solutions</span>
+            <span class="highlight-text" data-i18n="about.box1">Soluzioni B2B e B2C</span>
           </li>
           <li class="highlight-card reveal reveal-delay-1">
             <span class="highlight-icon" aria-hidden="true">
@@ -202,7 +211,7 @@
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
               </svg>
             </span>
-            <span class="highlight-text">Authentic Global Products</span>
+            <span class="highlight-text" data-i18n="about.box2">Prodotti globali autentici</span>
           </li>
           <li class="highlight-card reveal reveal-delay-2">
             <span class="highlight-icon" aria-hidden="true">
@@ -211,7 +220,7 @@
                 <path d="m9 12 2 2 4-4" />
               </svg>
             </span>
-            <span class="highlight-text">Reliable Customer Service</span>
+            <span class="highlight-text" data-i18n="about.box3">Servizio clienti affidabile</span>
           </li>
         </ul>
       </div>
@@ -221,9 +230,9 @@
     <section class="why section" id="why-choose-us" aria-labelledby="why-heading">
       <div class="container">
         <div class="section-header text-center">
-          <p class="section-label reveal">Why Choose Us</p>
-          <h2 id="why-heading" class="section-heading reveal">
-            A Reliable Partner in Premium Beauty
+          <p class="section-label reveal" data-i18n="why.label">Perché sceglierci</p>
+          <h2 id="why-heading" class="section-heading reveal" data-i18n="why.heading">
+            Un partner affidabile nel settore della bellezza premium
           </h2>
         </div>
 
@@ -235,9 +244,9 @@
                 <path d="m9 12 2 2 4-4" />
               </svg>
             </div>
-            <h3 class="benefit-title">Authentic Products</h3>
-            <p class="benefit-text">
-              We source genuine products from trusted manufacturers and internationally recognized brands.
+            <h3 class="benefit-title" data-i18n="why.card1Title">Prodotti autentici</h3>
+            <p class="benefit-text" data-i18n="why.card1Text">
+              Selezioniamo prodotti autentici da produttori affidabili e marchi riconosciuti a livello internazionale.
             </p>
           </article>
 
@@ -247,9 +256,9 @@
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
               </svg>
             </div>
-            <h3 class="benefit-title">Premium Quality</h3>
-            <p class="benefit-text">
-              Every product is selected with a strong focus on quality, performance, and customer satisfaction.
+            <h3 class="benefit-title" data-i18n="why.card2Title">Qualità superiore</h3>
+            <p class="benefit-text" data-i18n="why.card2Text">
+              Ogni prodotto è selezionato con particolare attenzione a qualità, performance e soddisfazione del cliente.
             </p>
           </article>
 
@@ -262,22 +271,24 @@
                 <path d="M10 14h4" />
               </svg>
             </div>
-            <h3 class="benefit-title">B2B &amp; B2C Expertise</h3>
-            <p class="benefit-text">
-              We serve retailers, wholesalers, business partners, and individual beauty consumers.
+            <h3 class="benefit-title" data-i18n="why.card3Title">Competenza B2B e B2C</h3>
+            <p class="benefit-text" data-i18n="why.card3Text">
+              Serviamo rivenditori, grossisti, partner commerciali e singoli consumatori di prodotti di bellezza.
             </p>
           </article>
         </div>
 
         <!-- Premium CTA block -->
-        <aside class="cta-block reveal" aria-labelledby="cta-heading" style="display: none;">
-          <div class="cta-content">
-            <h3 id="cta-heading" class="cta-heading">Explore Premium Beauty with AARKADA</h3>
-            <p class="cta-text">
-              Discover authentic beauty, skincare, haircare, and cosmetic products selected for quality and trust.
-            </p>
-          </div>
-          <a href="https://tpcvmc-1y.myshopify.com/" class="btn btn-primary btn-cta" aria-label="Shop AARKADA" target="_blank" rel="noopener noreferrer">Shop AARKADA</a>
+        <aside class="cta-block cta-block-simple reveal">
+          <a
+            href="https://tpcvmc-1y.myshopify.com/"
+            class="btn btn-primary btn-cta"
+            data-i18n="nav.shop"
+            data-i18n-aria="aria.shop"
+            aria-label="Acquista AARKADA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Acquista AARKADA</a>
         </aside>
       </div>
     </section>
@@ -292,9 +303,9 @@
 
       <div class="container">
         <div class="section-header text-center partnership-header">
-          <p class="section-label reveal">Bringing Premium European Skincare to the Italian Market</p>
+          <p class="section-label reveal" data-i18n="partner.label">Portare la skincare europea di alta gamma sul mercato italiano</p>
           <h2 id="partnership-heading" class="section-heading partnership-heading reveal">
-            <span class="partnership-heading-line">ATech Zones Appointed as the Official Distributor of Aarkada in Italy</span>
+            <span class="partnership-heading-line" data-i18n="partner.heading">ATech Zones nominata distributore ufficiale di Aarkada in Italia</span>
           </h2>
         </div>
 
@@ -315,14 +326,14 @@
 
             <div class="partnership-body">
               <div class="partnership-text">
-                <p>
-                  ATech Zones is proud to announce its official appointment as the Official Distributor of Aarkada in Italy.
+                <p data-i18n="partner.c1p1">
+                  ATech Zones è orgogliosa di annunciare la propria nomina a distributore ufficiale di Aarkada per l'Italia.
                 </p>
-                <p>
-                  This strategic partnership represents an important milestone in our company's growth and reflects our ongoing commitment to bringing exceptional European beauty and skincare brands to customers and business partners across Italy.
+                <p data-i18n="partner.c1p2">
+                  Questa partnership strategica rappresenta un traguardo importante per la crescita della nostra azienda e riflette il nostro costante impegno nel portare eccezionali marchi europei di bellezza e cura della pelle ai clienti e ai partner commerciali in tutta Italia.
                 </p>
-                <p>
-                  As the Official Distributor, ATech Zones will provide direct access to genuine Aarkada products, supplied straight from the manufacturer. This guarantees the highest standards of authenticity, quality, consistent product availability, and reliable service for both individual consumers and B2B partners.
+                <p data-i18n="partner.c1p3">
+                  In qualità di distributore ufficiale, ATech Zones garantirà l'accesso diretto ai prodotti originali Aarkada, provenienti direttamente dal produttore. Ciò assicura i più elevati standard di autenticità, qualità, costante disponibilità dei prodotti e affidabilità del servizio, sia per i consumatori privati che per i partner B2B.
                 </p>
               </div>
             </div>
@@ -332,16 +343,27 @@
           <article class="partnership-card partnership-card-alt reveal">
             <div class="partnership-body">
               <div class="partnership-text">
-                <p>
-                  At ATech Zones, we are committed to introducing carefully selected premium European beauty and skincare brands to the Italian market. Becoming the Official Distributor of Aarkada is an important step in that commitment and further strengthens our position as a trusted partner for premium beauty brands.
+                <p data-i18n="partner.c2p1">
+                  Noi di ATech Zones ci impegniamo a introdurre sul mercato italiano marchi europei di bellezza e cura della pelle di alta gamma, accuratamente selezionati. Diventare distributori ufficiali di Aarkada rappresenta un passo importante in questo percorso e rafforza ulteriormente la nostra posizione di partner di fiducia per i brand di bellezza premium.
                 </p>
-                <p>
-                  We extend our sincere gratitude to our customers, retailers, and business partners for their continued trust and support. We look forward to delivering the excellence, innovation, and professionalism that define both ATech Zones and Aarkada, while making authentic Aarkada products more accessible than ever throughout Italy.
+                <p data-i18n="partner.c2p2">
+                  Desideriamo esprimere la nostra sincera gratitudine a clienti, rivenditori e partner commerciali per la fiducia e il sostegno che ci dimostrano costantemente. Siamo entusiasti di portare l'eccellenza, l'innovazione e la professionalità che contraddistinguono sia ATech Zones che Aarkada, rendendo al contempo i prodotti originali Aarkada più accessibili che mai in tutta Italia.
                 </p>
               </div>
               <footer class="partnership-signoff">
-                <p class="partnership-signoff-brand">ATech Zones</p>
-                <p class="partnership-signoff-role">Official Distributor of Aarkada in Italy</p>
+                <div class="partnership-signoff-text">
+                  <p class="partnership-signoff-brand" data-i18n="partner.signBrand">ATech Zones</p>
+                  <p class="partnership-signoff-role" data-i18n="partner.signRole">Distributore Ufficiale Aarkada in Italia</p>
+                </div>
+                <a
+                  href="https://tpcvmc-1y.myshopify.com/"
+                  class="btn btn-primary btn-nav"
+                  data-i18n="nav.shop"
+                  data-i18n-aria="aria.shop"
+                  aria-label="Acquista AARKADA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Acquista AARKADA</a>
               </footer>
             </div>
 
@@ -365,34 +387,34 @@
     <section class="contact section" id="contact" aria-labelledby="contact-heading">
       <div class="container">
         <div class="section-header text-center">
-          <p class="section-label reveal">Contact Us</p>
-          <h2 id="contact-heading" class="section-heading reveal">
-            Let’s Build a Trusted Connection
+          <p class="section-label reveal" data-i18n="contact.label">Contattaci</p>
+          <h2 id="contact-heading" class="section-heading reveal" data-i18n="contact.heading">
+            Costruiamo un rapporto di fiducia
           </h2>
-          <p class="section-lead reveal">
-            For product enquiries, wholesale opportunities, business partnerships, or general assistance, contact the ATech Zones team.
+          <p class="section-lead reveal" data-i18n="contact.lead">
+            Per informazioni sui prodotti, opportunità di vendita all'ingrosso, partnership commerciali o assistenza generale, contatta il team di ATech Zones.
           </p>
         </div>
 
         <div class="contact-grid">
-          <a href="tel:+39 351 8218799" class="contact-card reveal" aria-label="Call ATech Zones at +39 351 8218799">
+          <a href="tel:+39 351 8218799" class="contact-card reveal" data-i18n-aria="aria.call" aria-label="Chiama ATech Zones al +39 351 8218799">
             <div class="contact-icon" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
             </div>
-            <span class="contact-label">Phone</span>
+            <span class="contact-label" data-i18n="contact.phone">Telefono</span>
             <span class="contact-value">+39 351 8218799</span>
           </a>
 
-          <a href="mailto:Info@atechzones.com" class="contact-card reveal reveal-delay-1" aria-label="Email ATech Zones at Info@atechzones.com">
+          <a href="mailto:Info@atechzones.com" class="contact-card reveal reveal-delay-1" data-i18n-aria="aria.email" aria-label="Invia email a ATech Zones a Info@atechzones.com">
             <div class="contact-icon" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2" />
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
               </svg>
             </div>
-            <span class="contact-label">Email</span>
+            <span class="contact-label" data-i18n="contact.email">E-mail</span>
             <span class="contact-value">Info@atechzones.com</span>
           </a>
 
@@ -403,8 +425,8 @@
                 <circle cx="12" cy="10" r="3" />
               </svg>
             </div>
-            <span class="contact-label">Address</span>
-            <span class="contact-value">Via Gian Carlo Conestabile Della Staffa, 00124, Rome</span>
+            <span class="contact-label" data-i18n="contact.address">Indirizzo</span>
+            <span class="contact-value" data-i18n="contact.addressValue">Via Gian Carlo Conestabile Della Staffa, 00124, Roma</span>
           </div>
         </div>
       </div>
@@ -416,7 +438,7 @@
     <div class="container">
       <div class="footer-main">
         <div class="footer-brand">
-          <a href="#home" class="footer-logo" aria-label="ATech Zones — Home">
+          <a href="#home" class="footer-logo" data-i18n-aria="aria.home" aria-label="ATech Zones — Casa">
             <img
               src="images/logo.png"
               alt="ATech Zones logo"
@@ -425,25 +447,25 @@
             />
             <span class="footer-brand-name">ATech Zones</span>
           </a>
-          <p class="footer-brand-text">
-            Italian e-commerce company specializing in premium beauty, skincare, haircare, and cosmetic products.
+          <p class="footer-brand-text" data-i18n="footer.text">
+            Azienda italiana di e-commerce specializzata in prodotti premium per la bellezza, la cura della pelle, la cura dei capelli e la cosmetica.
           </p>
-          <p class="footer-brand-badge">Official Distributor of Aarkada in Italy</p>
+          <p class="footer-brand-badge" data-i18n="footer.badge">Distributore ufficiale di Aarkada in Italia</p>
         </div>
 
         <nav class="footer-col" aria-label="Footer">
-          <h3 class="footer-col-title">Quick Links</h3>
+          <h3 class="footer-col-title" data-i18n="footer.linksTitle">Link rapidi</h3>
           <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#why-choose-us">Why Choose Us</a></li>
-            <li><a href="#aarkada">Official Distributor</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-i18n="nav.home">Casa</a></li>
+            <li><a href="#about" data-i18n="nav.about">Chi siamo</a></li>
+            <li><a href="#why-choose-us" data-i18n="nav.why">Perché sceglierci</a></li>
+            <li><a href="#aarkada" data-i18n="nav.distributor">Distributore ufficiale</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contatto</a></li>
           </ul>
         </nav>
 
         <div class="footer-col">
-          <h3 class="footer-col-title">Get in Touch</h3>
+          <h3 class="footer-col-title" data-i18n="footer.contactTitle">Contatti</h3>
           <ul class="footer-contact">
             <li>
               <span class="footer-contact-icon" aria-hidden="true">
@@ -469,14 +491,14 @@
                   <circle cx="12" cy="10" r="3" />
                 </svg>
               </span>
-              <span>Via Gian Carlo Conestabile Della Staffa, 00124, Rome</span>
+              <span data-i18n="contact.addressValue">Via Gian Carlo Conestabile Della Staffa, 00124, Roma</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copy">© 2026 ATech Zones. All rights reserved.</p>
+        <p class="footer-copy" data-i18n="footer.copy">© 2026 ATech Zones. Tutti i diritti riservati.</p>
       </div>
     </div>
   </footer>
