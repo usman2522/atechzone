@@ -161,21 +161,37 @@
               <p data-i18n="about.p2">
                 Serviamo con orgoglio rivenditori, grossisti, partner commerciali e consumatori privati, offrendo prodotti autentici e di alta qualità provenienti da produttori affidabili e marchi rinomati a livello mondiale.
               </p>
-              <p data-i18n="about.p3">
-                I nostri prodotti sono disponibili sia sui principali marketplace online che sul nostro store dedicato, consentendoci di servire in modo efficiente, affidabile e conveniente sia i clienti B2B che quelli B2C.
-              </p>
-              <p data-i18n="about.p4">
-                Che siate rivenditori, grossisti, partner commerciali o appassionati di bellezza, ci impegniamo a offrire prodotti autentici, condizioni vantaggiose e un'esperienza cliente eccellente.
-              </p>
-              <p data-i18n="about.p5">
-                Grazie a una gestione efficiente del magazzino, a una logistica affidabile e a una catena di approvvigionamento ottimizzata, garantiamo una rapida evasione degli ordini, consegne sicure e un servizio costante, dall'acquisto fino alla consegna a domicilio.
-              </p>
-              <p data-i18n="about.p6">
-                Il nostro successo si fonda sulla dedizione del nostro team. La competenza, la passione e l'impegno verso l'eccellenza dei nostri collaboratori ci permettono di costruire partnership durature e di conquistare la fiducia dei clienti sui mercati internazionali.
-              </p>
-              <p data-i18n="about.p7">
-                In ATech Zones, la qualità, l'autenticità e la soddisfazione del cliente sono al centro di tutto ciò che facciamo.
-              </p>
+
+              <div class="about-more" id="about-more">
+                <div class="about-more-inner">
+                  <p data-i18n="about.p3">
+                    I nostri prodotti sono disponibili sia sui principali marketplace online che sul nostro store dedicato, consentendoci di servire in modo efficiente, affidabile e conveniente sia i clienti B2B che quelli B2C.
+                  </p>
+                  <p data-i18n="about.p4">
+                    Che siate rivenditori, grossisti, partner commerciali o appassionati di bellezza, ci impegniamo a offrire prodotti autentici, condizioni vantaggiose e un'esperienza cliente eccellente.
+                  </p>
+                  <p data-i18n="about.p5">
+                    Grazie a una gestione efficiente del magazzino, a una logistica affidabile e a una catena di approvvigionamento ottimizzata, garantiamo una rapida evasione degli ordini, consegne sicure e un servizio costante, dall'acquisto fino alla consegna a domicilio.
+                  </p>
+                  <p data-i18n="about.p6">
+                    Il nostro successo si fonda sulla dedizione del nostro team. La competenza, la passione e l'impegno verso l'eccellenza dei nostri collaboratori ci permettono di costruire partnership durature e di conquistare la fiducia dei clienti sui mercati internazionali.
+                  </p>
+                  <p class="about-text-highlight" data-i18n="about.p7">
+                    In ATech Zones, la qualità, l'autenticità e la soddisfazione del cliente sono al centro di tutto ciò che facciamo.
+                  </p>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                class="about-read-more"
+                id="about-read-more"
+                data-i18n="about.readMore"
+                aria-expanded="false"
+                aria-controls="about-more"
+              >
+                Leggi di più
+              </button>
             </div>
           </div>
 
@@ -321,6 +337,9 @@
                   height="1000"
                   loading="lazy"
                 />
+                <span class="partnership-badge" aria-hidden="true">
+                  <img src="images/logo.svg" alt="" width="93" height="60" />
+                </span>
               </figure>
             </div>
 
@@ -368,15 +387,45 @@
             </div>
 
             <div class="partnership-media">
-              <figure class="partnership-figure">
-                <img
-                  src="images/2.jpeg"
-                  alt="Aarkada luxury skincare collection on marble with white lily"
-                  width="800"
-                  height="1000"
-                  loading="lazy"
-                />
-              </figure>
+              <div class="partnership-slider" id="partnership-slider" aria-roledescription="carousel" aria-label="Aarkada products">
+                <div class="partnership-slider-track">
+                  <div class="partnership-slide is-active">
+                    <img src="images/2.jpeg" alt="Aarkada luxury skincare collection on marble" width="800" height="1000" loading="eager" />
+                  </div>
+                  <div class="partnership-slide">
+                    <img src="images/3.jpeg" alt="Aarkada premium beauty product collage" width="800" height="1000" loading="lazy" />
+                  </div>
+                  <div class="partnership-slide">
+                    <img src="images/4.jpeg" alt="Aarkada serum bottle with lily and blue silk" width="800" height="1000" loading="lazy" />
+                  </div>
+                  <div class="partnership-slide">
+                    <img src="images/image%201.webp" alt="Aarkada product lifestyle photo" width="800" height="1000" loading="lazy" />
+                  </div>
+                  <div class="partnership-slide">
+                    <img src="images/image%202.jpg" alt="Aarkada skincare product photo" width="800" height="1000" loading="lazy" />
+                  </div>
+                  <div class="partnership-slide">
+                    <img src="images/image%203.webp" alt="Aarkada beauty product photo" width="800" height="1000" loading="lazy" />
+                  </div>
+                </div>
+
+                <span class="partnership-badge" aria-hidden="true">
+                  <img src="images/logo.svg" alt="" width="93" height="60" />
+                </span>
+
+                <button type="button" class="partnership-slider-btn partnership-slider-prev" aria-label="Previous image">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+                <button type="button" class="partnership-slider-btn partnership-slider-next" aria-label="Next image">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+
+                <div class="partnership-slider-dots" role="tablist" aria-label="Slide controls"></div>
+              </div>
             </div>
           </article>
         </div>

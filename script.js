@@ -60,6 +60,8 @@
       "about.box1": "Soluzioni B2B e B2C",
       "about.box2": "Prodotti globali autentici",
       "about.box3": "Servizio clienti affidabile",
+      "about.readMore": "Leggi di più",
+      "about.readLess": "Leggi meno",
       "why.label": "Perché sceglierci",
       "why.heading": "Un partner affidabile nel settore della bellezza premium",
       "why.card1Title": "Prodotti autentici",
@@ -146,6 +148,8 @@
       "about.box1": "B2B & B2C Solutions",
       "about.box2": "Authentic Global Products",
       "about.box3": "Reliable Customer Service",
+      "about.readMore": "Read more",
+      "about.readLess": "Read less",
       "why.label": "Why Choose Us",
       "why.heading": "A Reliable Partner in Premium Beauty",
       "why.card1Title": "Authentic Products",
@@ -213,6 +217,9 @@
       const value = getNestedOrFlat(dict, key);
       if (value == null) return;
 
+      /* Read-more label depends on expanded state — handled separately */
+      if (el.id === "about-read-more") return;
+
       if (el.tagName === "TITLE") {
         document.title = value;
         return;
@@ -223,6 +230,14 @@
       }
       el.textContent = value;
     });
+
+    const aboutReadMoreBtn = document.getElementById("about-read-more");
+    if (aboutReadMoreBtn) {
+      const expanded = aboutReadMoreBtn.getAttribute("aria-expanded") === "true";
+      aboutReadMoreBtn.textContent = expanded
+        ? dict["about.readLess"]
+        : dict["about.readMore"];
+    }
 
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
       const key = el.getAttribute("data-i18n-aria");
@@ -385,6 +400,120 @@
 
   window.addEventListener("scroll", updateActiveNav, { passive: true });
   updateActiveNav();
+
+  /* ---------- About read more ---------- */
+  const aboutMore = document.getElementById("about-more");
+  const aboutReadMore = document.getElementById("about-read-more");
+
+  if (aboutReadMore && aboutMore) {
+    aboutReadMore.addEventListener("click", function () {
+      const expanded = aboutReadMore.getAttribute("aria-expanded") === "true";
+      const next = !expanded;
+      aboutReadMore.setAttribute("aria-expanded", next ? "true" : "false");
+      aboutMore.classList.toggle("is-open", next);
+      const dict = translations[currentLang];
+      aboutReadMore.textContent = next
+        ? dict["about.readLess"]
+        : dict["about.readMore"];
+    });
+  }
+
+  /* ---------- Partnership image slider ---------- */
+  const slider = document.getElementById("partnership-slider");
+
+  if (slider) {
+    const track = slider.querySelector(".partnership-slider-track");
+    const slides = Array.prototype.slice.call(
+      slider.querySelectorAll(".partnership-slide")
+    );
+    const dotsWrap = slider.querySelector(".partnership-slider-dots");
+    const prevBtn = slider.querySelector(".partnership-slider-prev");
+    const nextBtn = slider.querySelector(".partnership-slider-next");
+    let index = 0;
+    let timer = null;
+    const autoplayMs = 4500;
+
+    function updateSlider() {
+      if (!slides.length || !track) return;
+
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle("is-active", i === index);
+      });
+
+      if (dotsWrap) {
+        const dots = dotsWrap.querySelectorAll(".partnership-slider-dot");
+        dots.forEach(function (dot, i) {
+          dot.classList.toggle("is-active", i === index);
+        });
+      }
+
+      track.style.transform = "translateX(-" + index * 100 + "%)";
+    }
+
+    function goTo(nextIndex) {
+      if (!slides.length) return;
+      index = (nextIndex + slides.length) % slides.length;
+      updateSlider();
+    }
+
+    function next() {
+      goTo(index + 1);
+    }
+
+    function prev() {
+      goTo(index - 1);
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      if (prefersReducedMotion || slides.length < 2) return;
+      timer = window.setInterval(next, autoplayMs);
+    }
+
+    function stopAutoplay() {
+      if (timer) {
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    if (dotsWrap) {
+      slides.forEach(function (_, i) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className =
+          "partnership-slider-dot" + (i === 0 ? " is-active" : "");
+        dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+        dot.addEventListener("click", function () {
+          goTo(i);
+          startAutoplay();
+        });
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        prev();
+        startAutoplay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        next();
+        startAutoplay();
+      });
+    }
+
+    slider.addEventListener("mouseenter", stopAutoplay);
+    slider.addEventListener("mouseleave", startAutoplay);
+    slider.addEventListener("focusin", stopAutoplay);
+    slider.addEventListener("focusout", startAutoplay);
+
+    updateSlider();
+    startAutoplay();
+  }
 
   /* ---------- Intersection Observer: fade-up reveals ---------- */
   const revealElements = document.querySelectorAll(".reveal");
