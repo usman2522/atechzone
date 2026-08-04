@@ -21,9 +21,9 @@
   /* ---------- i18n ---------- */
   const translations = {
     it: {
-      "meta.title": "ATech Zones | Bellezza premium. Qualità affidabile.",
+      "meta.title": "ATech Zones | Bellezza Eccellente. Qualità Affidabile.",
       "meta.description":
-        "ATech Zones — e-commerce italiano per prodotti premium di bellezza, cura della pelle, cura dei capelli e cosmetica. Bellezza premium. Qualità affidabile.",
+        "ATech Zones — impresa italiana e-commerce specializzata in prodotti cosmetici di eccellenza per la cura e la bellezza della pelle e dei capelli. Bellezza Eccellente. Qualità Affidabile.",
       "nav.home": "Casa",
       "nav.about": "Chi siamo",
       "nav.why": "Perché sceglierci",
@@ -37,26 +37,26 @@
       "aria.menu": "Menu",
       "aria.call": "Chiama ATech Zones al +39 351 8218799",
       "aria.email": "Invia email a ATech Zones a Info@atechzones.com",
-      "hero.label": "Benvenuti su ATech Zones",
-      "hero.heading": "Bellezza premium. Qualità affidabile.",
+      "hero.label": "Benvenuti alla ATech Zones!",
+      "hero.heading": "Bellezza Eccellente. Qualità Affidabile.",
       "hero.text":
-        "ATech Zones è un'azienda italiana di e-commerce specializzata nell'approvvigionamento, nella distribuzione e nella vendita online di prodotti di alta gamma per la bellezza, la cura della pelle, la cura dei capelli e la cosmetica.",
+        "ATech Zones è un'impresa italiana e-commerce specializzata in approvvigionamento, distribuzione e vendita al dettaglio di prodotti cosmetici di eccellenza per la cura e la bellezza della pelle e dei capelli.",
       "hero.ctaSecondary": "Scopri la partnership",
       "about.heading": "Informazioni su ATech Zones",
       "about.p1":
-        "ATech Zones è un'azienda italiana di e-commerce specializzata nell'approvvigionamento, nella distribuzione e nella vendita online di prodotti premium per la bellezza, la cura della pelle, la cura dei capelli e la cosmetica.",
+        "ATech Zones è un'impresa italiana e-commerce specializzata in approvvigionamento, distribuzione e vendita al dettaglio di prodotti cosmetici di eccellenza per la cura e la bellezza della pelle e dei capelli.",
       "about.p2":
-        "Serviamo con orgoglio rivenditori, grossisti, partner commerciali e consumatori privati, offrendo prodotti autentici e di alta qualità provenienti da produttori affidabili e marchi rinomati a livello mondiale.",
+        "Serviamo rivenditori, grossisti, partner commerciali e consumatori finali offrendo prodotti autentici e di alta qualità forniti da produttori affidabili e marchi rinomati in tutto il mondo.",
       "about.p3":
-        "I nostri prodotti sono disponibili sia sui principali marketplace online che sul nostro store dedicato, consentendoci di servire in modo efficiente, affidabile e conveniente sia i clienti B2B che quelli B2C.",
+        "I nostri prodotti sono acquistabili nei marketplace online più conosciuti e nel nostro e-shop. Questo ci permette di offrire un servizio efficiente sia ai clienti B2B che B2C con affidabilità e convenienza.",
       "about.p4":
-        "Che siate rivenditori, grossisti, partner commerciali o appassionati di bellezza, ci impegniamo a offrire prodotti autentici, condizioni vantaggiose e un'esperienza cliente eccellente.",
+        "Che tu sia un rivenditore, un grossista, un partner commerciale o un amante della bellezza, noi ci impegniamo a consegnare prodotti originali dal valore competitivo e un'eccezionale esperienza cliente.",
       "about.p5":
-        "Grazie a una gestione efficiente del magazzino, a una logistica affidabile e a una catena di approvvigionamento ottimizzata, garantiamo una rapida evasione degli ordini, consegne sicure e un servizio costante, dall'acquisto fino alla consegna a domicilio.",
+        "Supportati da uno stoccaggio efficiente, da una logistica affidabile e da una filiera ottimizzata, assicuriamo la rapida evasione degli ordini, consegne affidabili e un servizio efficiente dall'acquisto al domicilio.",
       "about.p6":
-        "Il nostro successo si fonda sulla dedizione del nostro team. La competenza, la passione e l'impegno verso l'eccellenza dei nostri collaboratori ci permettono di costruire partnership durature e di conquistare la fiducia dei clienti sui mercati internazionali.",
+        "Il nostro successo è costruito sulla dedizione del nostro team la cui competenza, la passione e l'impegno verso l'eccellenza ci permettono di stabilire partnership durature e di guadagnare la fiducia dei clienti a livello internazionale.",
       "about.p7":
-        "In ATech Zones, la qualità, l'autenticità e la soddisfazione del cliente sono al centro di tutto ciò che facciamo.",
+        "Alla ATech Zones la qualità, l'autenticità e la soddisfazione del cliente sono al centro di ogni cosa che facciamo.",
       "about.box1": "Soluzioni B2B e B2C",
       "about.box2": "Prodotti globali autentici",
       "about.box3": "Servizio clienti affidabile",
@@ -77,21 +77,21 @@
       "cta.text":
         "Scopri prodotti autentici di bellezza, cura della pelle, cura dei capelli e cosmetica selezionati per qualità e affidabilità.",
       "partner.label":
-        "Portare la skincare europea di alta gamma sul mercato italiano",
+        "Portiamo l'eccellenza Europea nella cura della pelle ai Clienti di tutta Italia.",
       "partner.heading":
-        "ATech Zones nominata distributore ufficiale di Aarkada in Italia",
+        "ATech Zones diventa distributore ufficiale della Aarkada in Italia.",
       "partner.c1p1":
-        "ATech Zones è orgogliosa di annunciare la propria nomina a distributore ufficiale di Aarkada per l'Italia.",
+        "Alla ATech Zones siamo orgogliosi di annunciare che siamo stati nominati Distributori Ufficiali Aarkada per tutto il mercato italiano.",
       "partner.c1p2":
-        "Questa partnership strategica rappresenta un traguardo importante per la crescita della nostra azienda e riflette il nostro costante impegno nel portare eccezionali marchi europei di bellezza e cura della pelle ai clienti e ai partner commerciali in tutta Italia.",
+        "Questa partnership è una tappa fondamentale per la crescita della nostra impresa, rinforza il nostro impegno a offrire prodotti autentici e di qualità eccellente per la bellezza e la cura della pelle in tutta Italia.",
       "partner.c1p3":
-        "In qualità di distributore ufficiale, ATech Zones garantirà l'accesso diretto ai prodotti originali Aarkada, provenienti direttamente dal produttore. Ciò assicura i più elevati standard di autenticità, qualità, costante disponibilità dei prodotti e affidabilità del servizio, sia per i consumatori privati che per i partner B2B.",
+        "ATech Zones fornisce i prodotti originali Aarkada direttamente dal produttore al consumatore e al rivenditore B2B, assicurando i più alti standard di qualità (e garantendo la disponibilità di magazzino).",
       "partner.c2p1":
-        "Noi di ATech Zones ci impegniamo a introdurre sul mercato italiano marchi europei di bellezza e cura della pelle di alta gamma, accuratamente selezionati. Diventare distributori ufficiali di Aarkada rappresenta un passo importante in questo percorso e rafforza ulteriormente la nostra posizione di partner di fiducia per i brand di bellezza premium.",
+        "La nostra missione è portare sul mercato italiano marchi di eccellenza per la bellezza e la cura della persona, attraverso il nostro e-shop e altri marketplace. Diventando il Distributore Ufficiale Aarkada abbiamo assolto una volta di più il nostro impegno.",
       "partner.c2p2":
-        "Desideriamo esprimere la nostra sincera gratitudine a clienti, rivenditori e partner commerciali per la fiducia e il sostegno che ci dimostrano costantemente. Siamo entusiasti di portare l'eccellenza, l'innovazione e la professionalità che contraddistinguono sia ATech Zones che Aarkada, rendendo al contempo i prodotti originali Aarkada più accessibili che mai in tutta Italia.",
+        "Un ringraziamento particolare va ai nostri clienti e partner commerciali per la fiducia e il supporto che continuano a dimostrarci. Siamo lieti di continuare a servirvi con la professionalità che contraddistingue ATech Zones e Aarkada.",
       "partner.signBrand": "ATech Zones",
-      "partner.signRole": "Distributore Ufficiale Aarkada in Italia",
+      "partner.signRole": "Distributore Ufficiale Aarkada in Italy",
       "contact.label": "Contattaci",
       "contact.heading": "Costruiamo un rapporto di fiducia",
       "contact.lead":
