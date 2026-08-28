@@ -21,24 +21,27 @@
   /* ---------- i18n ---------- */
   const translations = {
     it: {
-      "meta.title": "ATech Zones | Bellezza Eccellente. Qualità Affidabile.",
+      "meta.title": "ATech Zones | Bellezza Eccellente. Qualità Efficiente.",
       "meta.description":
-        "ATech Zones — impresa italiana e-commerce specializzata in prodotti cosmetici di eccellenza per la cura e la bellezza della pelle e dei capelli. Bellezza Eccellente. Qualità Affidabile.",
-      "nav.home": "Casa",
+        "ATech Zones — impresa italiana e-commerce specializzata in prodotti cosmetici di eccellenza per la cura e la bellezza della pelle e dei capelli. Bellezza Eccellente. Qualità Efficiente.",
+      "nav.home": "Home",
       "nav.about": "Chi siamo",
       "nav.why": "Perché sceglierci",
       "nav.distributor": "Distributore ufficiale",
       "nav.contact": "Contatto",
       "nav.shop": "Acquista AARKADA",
-      "aria.home": "ATech Zones — Casa",
+      "aria.home": "ATech Zones — Home",
       "aria.shop": "Acquista AARKADA",
+      "soon.heading": "In lancio a breve",
+      "soon.tagline": "Bellezza Eccellente. Qualità Efficiente.",
+      "soon.close": "Chiudi",
       "aria.openMenu": "Apri menu",
       "aria.closeMenu": "Chiudi menu",
       "aria.menu": "Menu",
       "aria.call": "Chiama ATech Zones al +39 351 8218799",
       "aria.email": "Invia email a ATech Zones a Info@atechzones.com",
       "hero.label": "Benvenuti alla ATech Zones!",
-      "hero.heading": "Bellezza Eccellente. Qualità Affidabile.",
+      "hero.heading": "Bellezza Eccellente. Qualità Efficiente.",
       "hero.text":
         "ATech Zones è un'impresa italiana e-commerce specializzata in approvvigionamento, distribuzione e vendita al dettaglio di prodotti cosmetici di eccellenza per la cura e la bellezza della pelle e dei capelli.",
       "hero.ctaSecondary": "Scopri la partnership",
@@ -52,18 +55,18 @@
       "about.p4":
         "Che tu sia un rivenditore, un grossista, un partner commerciale o un amante della bellezza, noi ci impegniamo a consegnare prodotti originali dal valore competitivo e un'eccezionale esperienza cliente.",
       "about.p5":
-        "Supportati da uno stoccaggio efficiente, da una logistica affidabile e da una filiera ottimizzata, assicuriamo la rapida evasione degli ordini, consegne affidabili e un servizio efficiente dall'acquisto al domicilio.",
+        "Supportati da uno stoccaggio efficiente, da una logistica efficiente e da una filiera ottimizzata, assicuriamo la rapida evasione degli ordini, consegne efficienti e un servizio efficiente dall'acquisto al domicilio.",
       "about.p6":
         "Il nostro successo è costruito sulla dedizione del nostro team la cui competenza, la passione e l'impegno verso l'eccellenza ci permettono di stabilire partnership durature e di guadagnare la fiducia dei clienti a livello internazionale.",
       "about.p7":
         "Alla ATech Zones la qualità, l'autenticità e la soddisfazione del cliente sono al centro di ogni cosa che facciamo.",
       "about.box1": "Soluzioni B2B e B2C",
-      "about.box2": "Prodotti globali autentici",
-      "about.box3": "Servizio clienti affidabile",
+      "about.box2": "Prodotti autentici",
+      "about.box3": "Servizio clienti efficiente",
       "about.readMore": "Leggi di più",
       "about.readLess": "Leggi meno",
       "why.label": "Perché sceglierci",
-      "why.heading": "Un partner affidabile nel settore della bellezza premium",
+      "why.heading": "Un partner efficiente nel settore della bellezza premium",
       "why.card1Title": "Prodotti autentici",
       "why.card1Text":
         "Selezioniamo prodotti autentici da produttori affidabili e marchi riconosciuti a livello internazionale.",
@@ -91,7 +94,7 @@
       "partner.c2p2":
         "Un ringraziamento particolare va ai nostri clienti e partner commerciali per la fiducia e il supporto che continuano a dimostrarci. Siamo lieti di continuare a servirvi con la professionalità che contraddistingue ATech Zones e Aarkada.",
       "partner.signBrand": "ATech Zones",
-      "partner.signRole": "Distributore Ufficiale Aarkada in Italy",
+      "partner.signRole": "Distributore Ufficiale Aarkada in Italia",
       "contact.label": "Contattaci",
       "contact.heading": "Costruiamo un rapporto di fiducia",
       "contact.lead":
@@ -100,7 +103,7 @@
       "contact.email": "E-mail",
       "contact.address": "Indirizzo",
       "contact.addressValue":
-        "Via Gian Carlo Conestabile Della Staffa, 00124, Roma",
+        "Via Gian Carlo Conestabile Della Staffa, 97, 00124, Roma",
       "footer.text":
         "Azienda italiana di e-commerce specializzata in prodotti premium per la bellezza, la cura della pelle, la cura dei capelli e la cosmetica.",
       "footer.badge": "Distributore ufficiale di Aarkada in Italia",
@@ -120,6 +123,9 @@
       "nav.shop": "Shop AARKADA",
       "aria.home": "ATech Zones — Home",
       "aria.shop": "Shop AARKADA",
+      "soon.heading": "Launching soon",
+      "soon.tagline": "Premium Beauty. Trusted Quality.",
+      "soon.close": "Close",
       "aria.openMenu": "Open menu",
       "aria.closeMenu": "Close menu",
       "aria.menu": "Menu",
@@ -188,7 +194,7 @@
       "contact.email": "Email",
       "contact.address": "Address",
       "contact.addressValue":
-        "Via Gian Carlo Conestabile Della Staffa, 00124, Rome",
+        "Via Gian Carlo Conestabile Della Staffa, 97, 00124, Rome",
       "footer.text":
         "Italian e-commerce company specializing in premium beauty, skincare, haircare, and cosmetic products.",
       "footer.badge": "Official Distributor of Aarkada in Italy",
@@ -548,4 +554,51 @@
       el.classList.add("is-visible");
     });
   }
+
+  /* ---------- Coming soon shop popup ---------- */
+  const soonModal = document.getElementById("soon-modal");
+  const soonCloseBtn = soonModal ? soonModal.querySelector(".soon-close") : null;
+  let soonLastFocus = null;
+
+  function openSoonModal() {
+    if (!soonModal) return;
+    closeMenu();
+    soonLastFocus = document.activeElement;
+    soonModal.hidden = false;
+    requestAnimationFrame(function () {
+      soonModal.classList.add("is-open");
+    });
+    document.body.classList.add("soon-open");
+    if (soonCloseBtn) soonCloseBtn.focus();
+  }
+
+  function closeSoonModal() {
+    if (!soonModal || soonModal.hidden) return;
+    soonModal.classList.remove("is-open");
+    document.body.classList.remove("soon-open");
+    window.setTimeout(function () {
+      if (!soonModal.classList.contains("is-open")) {
+        soonModal.hidden = true;
+      }
+    }, 280);
+    if (soonLastFocus && typeof soonLastFocus.focus === "function") {
+      soonLastFocus.focus();
+    }
+  }
+
+  document.querySelectorAll(".js-shop-soon").forEach(function (btn) {
+    btn.addEventListener("click", openSoonModal);
+  });
+
+  if (soonModal) {
+    soonModal.querySelectorAll("[data-soon-close]").forEach(function (el) {
+      el.addEventListener("click", closeSoonModal);
+    });
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && soonModal && !soonModal.hidden) {
+      closeSoonModal();
+    }
+  });
 })();
